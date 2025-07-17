@@ -3,8 +3,13 @@ import {  ScrollView, Text, View , Image, TouchableOpacity} from 'react-native'
 import { SafeAreaView } from "react-native-safe-area-context";
 import icons from "@/constants/icons";
 import images from "@/constants/images";
+import { useRouter } from 'expo-router';
 
 const SiginIn = () => {
+    const router = useRouter();
+  const handleLogin = () => {
+    router.replace("/");
+  };
   return (
     <SafeAreaView className='bg-white w-full h-full'>
       <ScrollView contentContainerClassName='h-full w-full'>
@@ -29,7 +34,7 @@ const SiginIn = () => {
           </Text>
 
           <TouchableOpacity
-            // onPress={handleLogin}
+            onPress={handleLogin}
             className="bg-white shadow-md shadow-zinc-300 rounded-full w-full py-4 mt-5"
           >
             <View className="flex flex-row items-center justify-center">
