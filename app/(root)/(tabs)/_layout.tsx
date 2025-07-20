@@ -87,7 +87,7 @@ import { Tabs } from 'expo-router';
 
 export default function TabLayout() {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: 'blue' }}>
+    <Tabs screenOptions={{ tabBarActiveTintColor: '#3b72ec' }}>
       <Tabs.Screen
         name="index"
         options={{
@@ -103,7 +103,7 @@ export default function TabLayout() {
         options={{
           title: 'explore',
           headerShown: false,
-          tabBarIcon: ({ color }) => <EvilIcons name="search" size={24} color="black" />,
+          tabBarIcon: ({ color }) => <EvilIcons name="search" size={24} color={color}  />,
         }}
       />
   
