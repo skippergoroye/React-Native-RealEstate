@@ -16,12 +16,13 @@ import Filters from "@/components/Filters";
 import NoResults from "@/components/NoResults";
 
 const index = () => {
-  const loading = true; // Simulating loading state, replace with actual loading logic
+  const loading = false; // Simulating loading state, replace with actual loading logic
   return (
     <SafeAreaView className="bg-white h-full">
       <FlatList
         numColumns={2}
         data={[1, 2, 3, 4]}
+        // data={[]}
         renderItem={({ item }) => <Card />}
         keyExtractor={(item) => item.toString()}
         contentContainerClassName="pb-32"
@@ -85,7 +86,7 @@ const index = () => {
                 Our Recommendation
               </Text>
               <TouchableOpacity>
-                <Text className="text-base  font-rubik-bold text-primary-300    ">
+                <Text className="text-base  font-rubik-bold text-primary-300">
                   See all
                 </Text>
               </TouchableOpacity>
